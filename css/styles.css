@@ -1,408 +1,341 @@
-*{
-    margin: 0;
+/* -------- Responsive -------- */
+/* Index */
+@media screen and (max-width: 480px) {
+  .encabezado {
+    height: 20rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "titulo" "menu";
+  }
+  .titulo_principal {
+    display: flex;
+    justify-self: center;
+    font-size: 2rem;
+  }
+  .menu {
+    justify-self: center;
+    font-size: 2rem;
+  }
+  .menu li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+  .foto_inicio {
+    width: 25rem;
+    height: 30rem;
+  }
+  .texto_inicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .texto_inicio h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .pdp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .fb {
+    width: 3rem;
+    height: 3.5rem;
+  }
+  .ig {
+    width: 3rem;
+    height: 3rem;
+  }
+  /* biografia */
+  .bio h1 {
+    font-size: 2rem;
+  }
+  .texto_bio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 0;
-    box-sizing: border-box;
+  }
+  .segundo_tbio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+  }
+}
+/* --------- GENERALES -------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-
-body{
-font-family: 'Raleway', sans-serif;
+body {
+  font-family: "Raleway", sans-serif;
 }
 
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-
-
-
 
 /* ----------- INDEX ----------------- */
-
-.cuerpo{
-    background-color: #5c3b1a;
+.cuerpo {
+  background-color: #5c3b1a;
 }
 
-.nm{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 10rem;
+.nm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  /* margin-top: 10rem; */
+  height: 80rem;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: flex-start;
 }
 
-.foto_inicio{
-    width: 30rem;
-    height: 40rem;
+.foto_inicio {
+  width: 55rem;
+  height: 70rem;
 }
 
-.texto_inicio{
-    color: #dad5d5;
+.texto_inicio {
+  color: #dad5d5;
+  margin-top: 10rem;
+  margin-right: 15rem;
 }
-
-.texto_inicio h1{
-    font-size: 3rem;
-    margin-bottom: 3rem;
+.texto_inicio h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
-
-.texto_inicio p{
-    margin-top: 2rem;
-    font-size: 1.5rem;
+.texto_inicio p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
-
 
 /* -------------- BIOGRAPHY ------------------- */
-
-.bio h1{
-    font-size: 3rem;
-    text-align: center;
-    padding: 2rem 0;
-    color: #dad5d5;
-    font-weight: 900;
+.bio h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+  color: #dad5d5;
+  font-weight: 900;
 }
 
-.pin_castle{
-    width: 30rem;
-    height: 30rem;
+.pin_castle {
+  width: 30rem;
+  height: 30rem;
 }
 
-.texto_bio{
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 5rem;
-    align-items: center;
+.texto_bio {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5rem;
+  align-items: center;
+}
+.texto_bio p {
+  font-size: 1.5rem;
+  margin: 5rem;
+  color: #dad5d5;
 }
 
-.texto_bio p{
-    font-size: 1.5rem;
-    margin: 5rem;
-    color: #dad5d5;
-}
-
-
-
-.pin_cara{
-    width: 25rem;
-    height: 25rem;
+.pin_cara {
+  width: 25rem;
+  height: 25rem;
 }
 
 .segundo_tbio {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 5rem;
-    margin-bottom: 5rem;
-    align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5rem;
+  margin-bottom: 5rem;
+  align-items: center;
 }
-
-.segundo_tbio p{
-    font-size: 1.5rem;
-    margin: 5rem;
-    color: #dad5d5;
+.segundo_tbio p {
+  font-size: 1.5rem;
+  margin: 5rem;
+  color: #dad5d5;
 }
-
-
-
-
 
 /* -------------- PINTURAS ------------------- */
-
-.container{  
-    display: grid;
-    grid-template-columns: repeat(4, 15rem);
-    grid-template-rows: repeat(5, 15rem);
-    gap: 0px 0px;
-    justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 13rem;
-    gap: 1rem;
-    grid-template-areas:
-"cuadrado naranja naranja costado"
-"pez naranja naranja costado"
-"largo hombre disco azul"
-"largo hombre oscuro oscuro"
-"largo estadio estadio multi";
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 15rem);
+  grid-template-rows: repeat(5, 15rem);
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 13rem;
+  gap: 1rem;
+  grid-template-areas: "cuadrado naranja naranja costado" "pez naranja naranja costado" "largo hombre disco azul" "largo hombre oscuro oscuro" "largo estadio estadio multi";
+}
+.container .costado {
+  grid-area: costado;
+  background-image: url(../images/C62.jpeg);
+  background-position: center left;
+  background-size: cover;
+}
+.container .azul {
+  grid-area: azul;
+  background-image: url(../images/C44.jpeg);
+  background-position: center;
+  background-size: contain;
+}
+.container .oscuro {
+  grid-area: oscuro;
+  background-image: url(../images/C15.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .disco {
+  grid-area: disco;
+  background-image: url(../images/C33.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .naranja {
+  grid-area: naranja;
+  background-image: url(../images/C59.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .cuadrado {
+  grid-area: cuadrado;
+  background-image: url(../images/C9.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .pez {
+  grid-area: pez;
+  background-image: url(../images/C8.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .largo {
+  grid-area: largo;
+  background-image: url(../images/C28.jpeg);
+  background-size: contain;
+}
+.container .estadio {
+  grid-area: estadio;
+  background-image: url(../images/C55.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .multi {
+  grid-area: multi;
+  background-image: url(../images/C41.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.container .hombre {
+  grid-area: hombre;
+  background-image: url(../images/C43.jpeg);
+  background-size: cover;
+  background-position: center;
 }
 
-.costado{ 
-    grid-area: costado;
-    background-image: url(../images/C62.jpeg);
-    background-position: center left;
-    background-size: cover;
+.fondo_p {
+  background: rgb(130, 84, 37);
+  background: radial-gradient(circle, rgb(130, 84, 37) 50%, rgb(92, 59, 26) 70%);
 }
-
-.azul{ 
-    grid-area: azul;
-    background-image: url(../images/C44.jpeg);
-    background-position: center;
-    background-size: contain;
-}
-
-.oscuro{
-    grid-area: oscuro;
-    background-image: url(../images/C15.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.disco { grid-area: disco; 
-    background-image: url(../images/C33.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.naranja { grid-area: naranja; 
-    background-image: url(../images/C59.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.cuadrado { grid-area: cuadrado; 
-    background-image: url(../images/C9.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.pez { grid-area: pez; 
-    background-image: url(../images/C8.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.largo { grid-area: largo; 
-    background-image: url(../images/C28.jpeg);
-    background-size: contain;
-}
-
-.estadio { grid-area: estadio; 
-    background-image: url(../images/C55.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.multi { grid-area: multi; 
-    background-image: url(../images/C41.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.hombre { grid-area: hombre; 
-    background-image: url(../images/C43.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-
 
 /* -------------- SHOP ------------------- */
-
-.carro{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 20rem;
+.carro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20rem;
+}
+.carro h2 {
+  color: #dad5d5;
+  font-size: 5rem;
 }
 
-.carro h2{
-    color: #dad5d5;
-    font-size: 5rem;
+.carri {
+  width: 20rem;
+  height: 20rem;
 }
-
-
-
-.carri{
-    width: 20rem;
-    height: 20rem;
-}
-
-
 
 /* -------------- CONTACTO ------------------- */
-
-.formulario{
-    margin-top: 10rem;
-    margin-left: 10rem;
-    margin-bottom: 10rem;
-    margin-right: 40rem;
-    color: #dad5d5;
-    font-size: 2rem;
-    text-align: right;
+.formulario {
+  margin-top: 10rem;
+  margin-left: 10rem;
+  margin-bottom: 10rem;
+  margin-right: 40rem;
+  color: #dad5d5;
+  font-size: 2rem;
+  text-align: right;
 }
-
-
 
 /* --------------- FOOTER ----------------- */
-
-.pdp{
-    font-weight: bold;
-    font-size: 1.3rem;
-    background-color: #b37411;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5rem;
+.pdp {
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-color: #b37411;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
 }
-
-.fb{
-    width: 2rem;
-    height: 2rem;
+.pdp .fb {
+  width: 2rem;
+  height: 2rem;
 }
-
-.ig{
-    width: 2rem;
-    height: 2rem;
+.pdp .ig {
+  width: 2rem;
+  height: 2rem;
 }
-
 
 /* ---------- GRID ------------------- */
-
-
-
-
 /* Estructura grid header */
-
-.encabezado{
-    display: grid;
-    height: 10rem;
-    justify-items: stretch;
-    background-color: #b37411;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "titulo menu"
+.encabezado {
+  display: grid;
+  height: 10rem;
+  justify-items: stretch;
+  background-color: #b37411;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "titulo menu";
 }
 
-.titulo_principal{
-    grid-area: titulo;
-    font-weight: 700;
-    font-size: 3rem;
-    justify-self: start;
-    align-self: start;
-    margin-left: 2rem;
-    margin-top: 2rem;
+.titulo_principal {
+  grid-area: titulo;
+  font-weight: 700;
+  font-size: 3rem;
+  justify-self: start;
+  align-self: start;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
-.menu{
-    grid-area: menu;
-    list-style-type: none;
-    font-weight: 700;
-    font-size: 2.5rem;
-    justify-self: end;
-    align-self: end;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+.menu {
+  grid-area: menu;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 2.5rem;
+  justify-self: end;
+  align-self: end;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.menu li {
+  display: inline-block;
 }
 
-.menu li{
-    display: inline-block;
-}
-
-
-
-
-/* ----------- Responsive -------- */
-
-
-/* imdex */
-
-@media screen and (max-width: 480px){
-
-    .encabezado{
-        height: 20rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "titulo"
-        "menu";
-    }
-
-    .titulo_principal{
-        display: flex;
-        justify-self: center;
-        font-size: 2rem;
-    }
-    
-    .menu{
-        justify-self: center;
-        font-size: 2rem;
-    }
-    
-    .menu li{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 0.5rem;
-    }
-    
-    .foto_inicio{
-        width: 25rem;
-        height: 30rem;
-    }
-
-    .texto_inicio{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-
-    .texto_inicio h1{
-        font-size: 2rem;
-        text-align: center;
-        padding-top: 2rem;
-    }
-
-
-    .pdp{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-    }
-
-    .fb{
-        width: 3rem;
-        height: 3.5rem;
-    }
-
-    .ig{
-        width: 3rem;
-        height: 3rem;
-    }
-
-
-/* biografia */
-
-
-    .bio h1{
-        font-size: 2rem;
-    }
-
-    .texto_bio{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0;
-    }
-
-    .segundo_tbio{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0;
-    }
-
-
-}
-
+/*# sourceMappingURL=styles.css.map */
