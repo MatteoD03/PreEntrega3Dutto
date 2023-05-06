@@ -42,7 +42,7 @@ a {
   color: #dad5d5;
   margin-top: 10rem;
 }
-.texto_inicio h1 {
+.texto_inicio h2 {
   font-size: 4rem;
   margin-bottom: 3rem;
   text-decoration: underline;
@@ -53,7 +53,7 @@ a {
 }
 
 /* -------------- BIOGRAPHY ------------------- */
-.bio h1 {
+.bio h2 {
   font-size: 3rem;
   text-align: center;
   padding: 2rem 0;
@@ -64,6 +64,11 @@ a {
 .pin_castle {
   width: 30rem;
   height: 30rem;
+  transition: all 2s;
+}
+.pin_castle:hover {
+  width: 50rem;
+  height: 50rem;
 }
 
 .texto_bio {
@@ -81,6 +86,10 @@ a {
 .pin_cara {
   width: 25rem;
   height: 25rem;
+  transition: all 4s;
+}
+.pin_cara:hover {
+  transform: rotate(360deg);
 }
 
 .segundo_tbio {
@@ -94,8 +103,29 @@ a {
   font-size: 1.5rem;
   margin: 5rem;
   color: #dad5d5;
+  animation-name: prueba;
+  animation-duration: 7s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes prueba {
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 75%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 25%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 /* -------------- PINTURAS ------------------- */
 .container {
   display: grid;
@@ -332,7 +362,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
   }
-  .texto_inicio h1 {
+  .texto_inicio h2 {
     font-size: 3rem;
     text-align: center;
     padding-top: 2rem;
@@ -341,7 +371,7 @@ a {
     margin: 1rem;
   }
   /* Biografía */
-  .bio h1 {
+  .bio h2 {
     font-size: 2rem;
   }
   .texto_bio {

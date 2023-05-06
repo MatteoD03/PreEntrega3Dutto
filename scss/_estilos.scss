@@ -42,7 +42,7 @@ a{
 .texto_inicio{
     color: $colorTextos;
     margin-top: 10rem;
-    h1{
+    h2{
         font-size: 4rem;
         margin-bottom: 3rem;
         text-decoration: underline;
@@ -56,17 +56,24 @@ a{
 
 /* -------------- BIOGRAPHY ------------------- */
 
-.bio h1{
+.bio{
+    h2{
     font-size: 3rem;
     text-align: center;
     padding: 2rem 0;
     color: $colorTextos;
     font-weight: 800;
+    }
 }
 
 .pin_castle{
     width: 30rem;
     height: 30rem;
+    transition: all 2s;
+    &:hover{
+        width: 50rem;
+        height: 50rem;
+    }
 }
 
 .texto_bio{
@@ -84,6 +91,10 @@ a{
 .pin_cara{
     width: 25rem;
     height: 25rem;
+    transition: all 4s;
+    &:hover{
+        transform: rotate(360deg);
+    }
 }
 
 .segundo_tbio{
@@ -96,6 +107,28 @@ a{
         font-size: 1.5rem;
         margin: 5rem;
         color: $colorTextos;
+        animation-name: prueba;
+        animation-duration: 7s;
+        animation-delay: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes prueba{
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 75%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 25%;
+    }
+    100%{
+        opacity: 0%;
     }
 }
 
