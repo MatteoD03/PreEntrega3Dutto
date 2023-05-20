@@ -23,6 +23,22 @@ a {
   background-color: #ffffff;
 }
 
+.carou_i img {
+  padding-top: 1rem;
+  height: 30rem;
+}
+.carou_i a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.carou_i a:hover {
+  background-color: rgb(202, 42, 42);
+  color: #ffffff;
+}
+.carou_i a:visited {
+  color: inherit;
+}
+
 .nm {
   display: flex;
   flex-direction: row-reverse;
@@ -77,107 +93,110 @@ a {
 .texto_bio {
   display: flex;
   flex-direction: row;
-  padding: 5rem;
+  padding: 2rem 7rem;
   align-items: center;
-  background-color: #dad5d5;
+  background-color: #a7a7a7;
 }
 
 .pin_cara {
   width: 25rem;
   height: 25rem;
-  transition: all 4s;
 }
 
 .segundo_tbio {
   display: flex;
   flex-direction: row-reverse;
-  padding: 5rem;
-  margin-bottom: 5rem;
+  padding: 2rem 7rem;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #ffffff;
+}
+
+.tercer_tbio {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 7rem;
+  align-items: center;
+  padding-bottom: 8rem;
+  background-color: #a7a7a7;
 }
 
 /* -------------- PINTURAS ------------------- */
-.container {
+.caja {
   display: grid;
-  grid-template-columns: repeat(4, 15rem);
-  grid-template-rows: repeat(5, 15rem);
+  grid-template-columns: repeat(4, 30rem);
+  grid-template-rows: repeat(5, 30rem);
   justify-content: center;
   padding-top: 5rem;
   padding-bottom: 13rem;
   gap: 1rem;
   grid-template-areas: "cuadrado naranja naranja costado" "pez naranja naranja costado" "largo hombre disco azul" "largo hombre oscuro oscuro" "largo estadio estadio multi";
 }
-.container .costado {
+.caja .costado {
   grid-area: costado;
   background-image: url(../images/C62.jpeg);
   background-position: center left;
   background-size: cover;
 }
-.container .azul {
+.caja .azul {
   grid-area: azul;
   background-image: url(../images/C44.jpeg);
   background-position: center;
   background-size: contain;
 }
-.container .oscuro {
+.caja .oscuro {
   grid-area: oscuro;
   background-image: url(../images/C15.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .disco {
+.caja .disco {
   grid-area: disco;
   background-image: url(../images/C33.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .naranja {
+.caja .naranja {
   grid-area: naranja;
   background-image: url(../images/C59.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .cuadrado {
+.caja .cuadrado {
   grid-area: cuadrado;
   background-image: url(../images/C9.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .pez {
+.caja .pez {
   grid-area: pez;
   background-image: url(../images/C8.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .largo {
+.caja .largo {
   grid-area: largo;
   background-image: url(../images/C28.jpeg);
   background-size: contain;
 }
-.container .estadio {
+.caja .estadio {
   grid-area: estadio;
   background-image: url(../images/C55.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .multi {
+.caja .multi {
   grid-area: multi;
   background-image: url(../images/C41.jpeg);
   background-size: cover;
   background-position: center;
 }
-.container .hombre {
+.caja .hombre {
   grid-area: hombre;
   background-image: url(../images/C43.jpeg);
   background-size: cover;
   background-position: center;
 }
 
-/* .fondo_p{
-    background: rgb(66,121,158);
-    background: radial-gradient(circle, rgba(66,121,158,1) 50%, rgba(47,100,136,1) 70%);
-} */
 /* -------------- SHOP ------------------- */
 .carro {
   display: flex;
@@ -222,8 +241,6 @@ a {
   flex-wrap: wrap;
   align-content: center;
   justify-content: flex-end;
-  font-weight: bold;
-  font-size: 1.7rem;
   background-color: #dad5d5;
   position: fixed;
   bottom: 0;
@@ -233,6 +250,8 @@ a {
 }
 .pdp h4 {
   margin-right: 8rem;
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 .pdp .fb {
   width: 2rem;
@@ -248,6 +267,7 @@ a {
 /* ---------- GRID ------------------- */
 /* Estructura grid header */
 .encabezado {
+  z-index: 10060;
   display: grid;
   height: 10rem;
   justify-items: stretch;
@@ -283,7 +303,12 @@ a {
   display: inline-block;
   background-color: #dad5d5;
 }
-.menu li a:visited {
+.menu li:hover {
+  background-color: rgb(202, 42, 42);
+  color: #ffffff;
+  text-decoration: underline;
+}
+.menu a:visited {
   color: inherit;
 }
 
