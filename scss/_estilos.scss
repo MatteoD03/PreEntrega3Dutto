@@ -18,6 +18,58 @@ a{
     text-decoration: none;
 }
 
+/* ---------- HEADER -----------*/
+
+.encabezado{
+    z-index: 10060;
+    display: grid;
+    height: 10rem;
+    justify-items: stretch;
+    background-image: url(../images/collage.jpg);
+    background-size: contain;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "titulo menu"
+}
+
+.titulo_principal{
+    grid-area: titulo;
+    font-weight: 900;
+    font-size: 3.8rem;
+    justify-self: start;
+    align-self: start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background-color: $colorSecundario;
+}
+
+.menu{
+    grid-area: menu;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 2.5rem;
+    justify-self: end;
+    align-self: end;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    li{
+        display: inline-block;
+        background-color: $colorSecundario;
+        color: #111111;
+        &:hover{
+            background-color: $colorTerciario;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    }
+    a{
+        &:visited{
+            color: inherit;
+        }
+    }
+}
+
 /* ----------- INDEX ----------------- */
 
 .cuerpo{
@@ -46,7 +98,7 @@ a{
 .nm{
     display: flex;
     flex-direction: row-reverse;
-    height: 80rem;
+    height: 100%;
     align-items: center;
     margin: 4rem;
     outline: outset 2.5rem;
@@ -73,7 +125,6 @@ a{
         font-size: 1.8rem;
     }
 }
-
 
 /* -------------- BIOGRAPHY ------------------- */
 
@@ -188,7 +239,6 @@ a{
     font-weight: 900;
 }
 
-
 /* -------------- SHOP ------------------- */
 
 .carrito{
@@ -232,7 +282,6 @@ a{
         font-weight: 500;
     }
 }
-
 
 /* -------------- CONTACTO ------------------- */
 
@@ -292,9 +341,6 @@ a{
     font-size: 1.5rem;
 }
 
-
-
-
 /* --------------- FOOTER ----------------- */
 
 .pdp{
@@ -303,7 +349,6 @@ a{
     align-content: center;
     justify-content: flex-end;
     background-color: #dad5d5;
-    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -325,55 +370,4 @@ a{
         }
 }
 
-/* ---------- GRID ------------------- */
 
-/* Estructura grid header */
-
-.encabezado{
-    z-index: 10060;
-    display: grid;
-    height: 10rem;
-    justify-items: stretch;
-    background-image: url(../images/collage.jpg);
-    background-size: contain;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "titulo menu"
-}
-
-.titulo_principal{
-    grid-area: titulo;
-    font-weight: 900;
-    font-size: 3.8rem;
-    justify-self: start;
-    align-self: start;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    background-color: $colorSecundario;
-}
-
-.menu{
-    grid-area: menu;
-    list-style-type: none;
-    font-weight: 700;
-    font-size: 2.5rem;
-    justify-self: end;
-    align-self: end;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    li{
-        display: inline-block;
-        background-color: $colorSecundario;
-        &:hover{
-            background-color: $colorTerciario;
-            color: #ffffff;
-            text-decoration: underline;
-        }
-    }
-    a{
-        &:visited{
-            color: inherit;
-        }
-    }
-}

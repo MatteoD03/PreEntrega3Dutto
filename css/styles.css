@@ -18,6 +18,54 @@ a {
   text-decoration: none;
 }
 
+/* ---------- HEADER -----------*/
+.encabezado {
+  z-index: 10060;
+  display: grid;
+  height: 10rem;
+  justify-items: stretch;
+  background-image: url(../images/collage.jpg);
+  background-size: contain;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "titulo menu";
+}
+
+.titulo_principal {
+  grid-area: titulo;
+  font-weight: 900;
+  font-size: 3.8rem;
+  justify-self: start;
+  align-self: start;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  background-color: #dad5d5;
+}
+
+.menu {
+  grid-area: menu;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 2.5rem;
+  justify-self: end;
+  align-self: end;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.menu li {
+  display: inline-block;
+  background-color: #dad5d5;
+  color: #111111;
+}
+.menu li:hover {
+  background-color: rgb(202, 42, 42);
+  color: #ffffff;
+  text-decoration: underline;
+}
+.menu a:visited {
+  color: inherit;
+}
+
 /* ----------- INDEX ----------------- */
 .cuerpo {
   background-color: #ffffff;
@@ -43,7 +91,7 @@ a {
 .nm {
   display: flex;
   flex-direction: row-reverse;
-  height: 80rem;
+  height: 100%;
   align-items: center;
   margin: 4rem;
   outline: outset 2.5rem;
@@ -287,7 +335,6 @@ a {
   align-content: center;
   justify-content: flex-end;
   background-color: #dad5d5;
-  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -309,55 +356,194 @@ a {
   margin-right: 8rem;
 }
 
-/* ---------- GRID ------------------- */
-/* Estructura grid header */
-.encabezado {
-  z-index: 10060;
-  display: grid;
-  height: 10rem;
-  justify-items: stretch;
-  background-image: url(../images/collage.jpg);
-  background-size: contain;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "titulo menu";
+/* Responsive */
+/* ----------------------------------------- */
+@media screen and (max-width: 1640px) {
+  /* pinturas */
+  .pin_info {
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+  }
+  .pin_info h2 {
+    margin-left: 1rem;
+  }
+  .pin_info button {
+    padding: 1rem 1rem;
+    margin: 1rem;
+  }
+  .price {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
 }
-
-.titulo_principal {
-  grid-area: titulo;
-  font-weight: 900;
-  font-size: 3.8rem;
-  justify-self: start;
-  align-self: start;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  background-color: #dad5d5;
+/* ----------------------------------------- */
+@media screen and (max-width: 1570px) {
+  /* header */
+  .encabezado {
+    background-size: cover;
+  }
+  .menu {
+    font-size: 2.2rem;
+  }
 }
-
-.menu {
-  grid-area: menu;
-  list-style-type: none;
-  font-weight: 700;
-  font-size: 2.5rem;
-  justify-self: end;
-  align-self: end;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+/* ----------------------------------------- */
+@media screen and (max-width: 1330px) {
+  /*  header  */
+  .menu {
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  /*  pinturas  */
+  .container_pin {
+    margin: 2rem;
+    margin-top: 4rem;
+  }
+  .pin_info {
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .pin_info h2 {
+    margin-left: 1rem;
+  }
+  .pin_info button {
+    padding: 1rem 1rem;
+    margin: 1rem;
+  }
+  .price {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  /*  shop  */
+  .carrito {
+    height: 70rem;
+  }
+  .vacio {
+    width: 50rem;
+    height: 30rem;
+  }
+  .compra h2 {
+    font-size: 2.6rem;
+  }
+  .compra p {
+    font-size: 2.6rem;
+  }
+  /*  contacto  */
+  .mensaje {
+    height: 70rem;
+  }
+  .textoContacto h3 {
+    font-size: 3.5rem;
+  }
+  .textoContacto p {
+    font-size: 2rem;
+  }
+  .formulario {
+    font-size: 2.5rem;
+  }
+  .form-group {
+    width: 50rem;
+  }
+  .form-control {
+    font-size: 1.5rem;
+    height: 5rem;
+  }
+  .btn {
+    font-size: 1.1rem;
+  }
+  /*  footer  */
+  .pdp {
+    height: 6rem;
+  }
 }
-.menu li {
-  display: inline-block;
-  background-color: #dad5d5;
+/* -------------------------------------------------------------- */
+@media screen and (max-width: 1230px) {
+  /* header */
+  .encabezado {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .titulo_principal {
+    font-size: 3.5rem;
+  }
+  .menu {
+    font-size: 2.5rem;
+  }
+  /* pinturas */
+  .container_pin {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 6rem;
+  }
 }
-.menu li:hover {
-  background-color: rgb(202, 42, 42);
-  color: #ffffff;
-  text-decoration: underline;
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 1092px) {
+  /* header */
+  .menu {
+    font-size: 2.3rem;
+  }
 }
-.menu a:visited {
-  color: inherit;
+@media screen and (max-width: 1036px) {
+  /* index */
+  .texto_inicio {
+    padding-right: 4rem;
+  }
+  /* shop */
+  .compra p {
+    font-size: 2rem;
+  }
+  /* contacto */
+  .form-group {
+    width: 40rem;
+  }
 }
-
-/* -------- Responsive -------- */
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 1008px) {
+  /* header */
+  .encabezado {
+    grid-template-columns: 1fr 2fr;
+  }
+  /* index */
+  .nm {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    margin: 4rem;
+    outline-color: #dad5d5;
+    padding: 3rem;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .foto_inicio {
+    padding-top: 2rem;
+  }
+}
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 926px) {
+  /* header */
+  .encabezado {
+    grid-template-columns: 1fr 2.5fr;
+  }
+  .titulo_principal {
+    font-size: 2.5rem;
+  }
+  .menu {
+    font-size: 1.8rem;
+  }
+  /* pinturas */
+  .container_pin {
+    margin: 2rem;
+  }
+  /* carrito */
+  .vacio {
+    width: 30rem;
+    height: 15rem;
+  }
+}
+/* -------- Responsive celu -------- */
 /* Header */
 @media screen and (max-width: 480px) {
   .encabezado {

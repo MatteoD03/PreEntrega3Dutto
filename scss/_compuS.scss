@@ -1,0 +1,268 @@
+/* Responsive */
+
+/* ----------------------------------------- */
+
+@media screen and (max-width: 1640px){
+
+/* pinturas */
+
+.pin_info{
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    h2{
+        margin-left: 1rem;
+    }
+    button{
+    padding: 1rem 1rem;
+    margin: 1rem;
+    }
+}
+
+.price{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+}
+
+/* ----------------------------------------- */
+
+@media screen and (max-width: 1570px){
+
+/* header */
+
+.encabezado{
+    background-size: cover;
+}
+
+.menu{
+    font-size: 2.2rem;
+}
+
+}
+
+/* ----------------------------------------- */
+
+@media screen and (max-width: 1330px){
+
+/*  header  */
+
+.menu{
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*  pinturas  */
+
+.container_pin{
+    margin: 2rem;
+    margin-top: 4rem;
+}
+
+.pin_info{
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    h2{
+        margin-left: 1rem;
+    }
+    button{
+    padding: 1rem 1rem;
+    margin: 1rem;
+    }
+}
+
+.price{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+/*  shop  */
+
+.carrito{
+    height: 70rem;
+}
+
+.vacio{
+    width: 50rem;
+    height: 30rem; 
+}
+
+.compra{
+    h2{
+        font-size: 2.6rem;
+    }
+    p{
+        font-size: 2.6rem;
+    }
+}
+
+/*  contacto  */
+
+.mensaje{
+    height: 70rem;
+}
+
+.textoContacto{
+    h3{
+        font-size: 3.5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+}
+
+.formulario{
+    font-size: 2.5rem;
+}
+
+.form-group{
+    width: 50rem;
+}
+
+.form-control{
+    font-size: 1.5rem;
+    height: 5rem;
+}
+
+.btn{
+    font-size: 1.1rem;
+}
+
+/*  footer  */
+
+.pdp{
+    height: 6rem;
+}
+
+}
+
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 1230px){
+
+/* header */
+
+.encabezado{
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.titulo_principal{
+    font-size: 3.5rem;
+}
+
+.menu{
+    font-size: 2.5rem;
+}
+
+/* pinturas */
+
+.container_pin{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 6rem;
+}
+
+}
+
+/* ---------------------------------------------------------- */
+
+@media screen and (max-width: 1092px){
+
+/* header */
+
+.menu{
+    font-size: 2.3rem;
+}
+
+
+}
+
+@media screen and (max-width: 1036px){
+
+/* index */
+
+.texto_inicio {
+    padding-right: 4rem;
+}
+
+/* shop */
+
+.compra{
+    p{
+        font-size: 2rem;
+    }
+}
+
+/* contacto */
+
+.form-group{
+    width: 40rem;
+}
+
+}
+
+/* ---------------------------------------------------------- */
+
+@media screen and (max-width: 1008px){
+
+/* header */
+
+.encabezado{
+    grid-template-columns: 1fr 2fr;
+}
+
+/* index */
+
+.nm{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    margin: 4rem;
+    outline-color: $colorSecundario;
+    padding: 3rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.foto_inicio{
+    padding-top: 2rem;
+}
+
+}
+
+/* ---------------------------------------------------------- */
+
+@media screen and (max-width: 926px){
+
+/* header */
+.encabezado{
+    grid-template-columns: 1fr 2.5fr;
+}
+
+.titulo_principal{
+    font-size: 2.5rem;
+}
+
+.menu{
+    font-size: 1.8rem;
+}
+
+/* pinturas */
+
+.container_pin{
+    margin: 2rem;
+}
+
+/* carrito */
+
+.vacio{
+    width: 30rem;
+    height: 15rem;
+}
+
+}
