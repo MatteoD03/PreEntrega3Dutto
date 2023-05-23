@@ -105,6 +105,8 @@ a{
     outline-color: $colorSecundario;
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .foto_inicio{
@@ -145,8 +147,8 @@ a{
 }
 
 .pin_castle{
-    width: 30rem;
-    height: 30rem;
+    width: 27rem;
+    height: 27rem;
 }
 
 .texto_bio{
@@ -155,6 +157,9 @@ a{
     padding: 2rem 7rem;
     align-items: center;
     background-color: #a7a7a7;
+    p{
+        line-height: 2.5rem;
+    }
 }
 
 .pin_cara{
@@ -168,6 +173,14 @@ a{
     padding: 2rem 7rem;
     align-items: center;
     background-color: #ffffff;
+    p{
+        line-height: 2.5rem;
+    }
+}
+
+.pin_disco{
+    width: 25rem;
+    height: 25rem;
 }
 
 .tercer_tbio{
@@ -176,6 +189,9 @@ a{
     padding: 2rem 7rem;
     align-items: center;
     background-color: #a7a7a7;
+    p{
+        line-height: 2.5rem;
+    }
 }
 
 /* -------------- PINTURAS ------------------- */
