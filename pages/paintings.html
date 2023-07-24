@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinturas MB</title>
 
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/extras/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -19,33 +21,33 @@
 
 <body class="cuerpo">
 
-    <!-- Encabezado con titulo y menú -->
-    <div class="encabezado"> 
-        <h1 class="titulo_principal">Martín Burgos</h1>
-
-    <header class="menu"> 
-        <nav> 
-            <ul>
+<!-- Encabezado con titulo y menú -->
+    <header class="encabezado">
+        <h1 class="logo">Martín Burgos</h1>
+        <button id="abrir" class="open-m"><i class="bi bi-list"></i></button>
+        <nav class="menu" id="nav"> 
+            <button id="cerrar" class="close-m"><i class="bi bi-x-square-fill"></i></button>
+            <ul class="menu-list">
                 <li>
                     <a href="../index.html">INICIO</a>
                 </li>
                 <li>
-                    <a href="../pages/biography.html">BIOGRAFÍA</a>
+                    <a href="biography.html">BIOGRAFÍA</a>
                 </li>
                 <li>
-                    <a href="../pages/paintings.html">PINTURAS</a>
+                    <a href="paintings.html">PINTURAS</a>
                 </li>
                 <li>
-                    <a href="../pages/shop.html">CARRITO</a>
+                    <a href="shop.html">CARRITO</a>
                 </li>
                 <li>
-                    <a href="../pages/contact.html">CONTACTO</a>
+                    <a href="contact.html">CONTACTO</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    </div>
+
 
 <!-- Titulo pinturas -->
 <div class="textopin">
@@ -152,9 +154,11 @@
     <!-- Pie de página -->
     <footer class="pdp"> 
         <h4>Redes sociales</h4>
-        <a href="https://www.facebook.com/"><img src="../images/fb.png" alt="Facebook" title="Ir a Facebook" class="fb"> </a>
-        <a href="https://www.instagram.com/"> <img src="../images/ig.png" alt="Instagram" title="Ir a Instagram" class="ig"></a>
+        <a href="https://www.facebook.com/"><img src="../images/extras/fb.png" alt="Facebook" title="Ir a Facebook" class="fb"> </a>
+        <a href="https://www.instagram.com/"> <img src="../images/extras/ig.png" alt="Instagram" title="Ir a Instagram" class="ig"></a>
     </footer>
+
+    <script src="../index.js"></script>
 
 </body>
 </html>

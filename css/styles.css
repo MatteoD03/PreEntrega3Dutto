@@ -19,50 +19,51 @@ a {
 
 /* ---------- HEADER -----------*/
 .encabezado {
-  z-index: 10060;
-  display: grid;
-  height: 10rem;
-  justify-items: stretch;
-  background-image: url(../images/collage.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../images/extras/collage.jpg);
   background-size: contain;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "titulo menu";
+  height: 10rem;
 }
 
-.titulo_principal {
-  grid-area: titulo;
+.logo {
   font-weight: 900;
   font-size: 3.8rem;
-  justify-self: start;
-  align-self: start;
-  margin-left: 2rem;
-  margin-top: 2rem;
   background-color: #dad5d5;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.menu {
-  grid-area: menu;
+.menu-list {
   list-style-type: none;
+  display: flex;
   font-weight: 700;
   font-size: 2.5rem;
-  justify-self: end;
-  align-self: end;
+  gap: 1rem;
   margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
-.menu li {
+.menu-list li {
   display: inline-block;
   background-color: #dad5d5;
   color: #111111;
 }
-.menu li:hover {
+.menu-list li:hover {
   background-color: rgb(202, 42, 42);
   color: #ffffff;
   text-decoration: underline;
 }
-.menu a:visited {
+.menu-list a:visited {
   color: inherit;
+}
+
+.open-m {
+  display: none;
+}
+
+.close-m {
+  display: none;
 }
 
 /* ----------- INDEX ----------------- */
@@ -374,6 +375,13 @@ a {
 /* Responsive */
 /* ----------------------------------------- */
 @media screen and (max-width: 1640px) {
+  /* header */
+  .menu-list {
+    font-size: 2rem;
+  }
+  .encabezado {
+    background-size: cover;
+  }
   /* pinturas */
   .pin_info {
     padding: 0rem;
@@ -394,23 +402,7 @@ a {
   }
 }
 /* ----------------------------------------- */
-@media screen and (max-width: 1570px) {
-  /* header */
-  .encabezado {
-    background-size: cover;
-  }
-  .menu {
-    font-size: 2.2rem;
-  }
-}
-/* ----------------------------------------- */
 @media screen and (max-width: 1330px) {
-  /*  header  */
-  .menu {
-    font-size: 2rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
   /*  pinturas  */
   .container_pin {
     margin: 2rem;
@@ -476,16 +468,6 @@ a {
 }
 /* -------------------------------------------------------------- */
 @media screen and (max-width: 1230px) {
-  /* header */
-  .encabezado {
-    grid-template-columns: 1fr 1.5fr;
-  }
-  .titulo_principal {
-    font-size: 3.5rem;
-  }
-  .menu {
-    font-size: 2rem;
-  }
   /* pinturas */
   .container_pin {
     display: grid;
@@ -497,10 +479,11 @@ a {
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 1092px) {
   /* header */
-  .menu {
-    font-size: 2rem;
+  .logo {
+    font-size: 3.2rem;
   }
 }
+/* --------------------------------------------------------- */
 @media screen and (max-width: 1036px) {
   /* index */
   .texto_inicio {
@@ -517,10 +500,6 @@ a {
 }
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 1008px) {
-  /* header */
-  .encabezado {
-    grid-template-columns: 1fr 2fr;
-  }
   /* index */
   .nm {
     display: flex;
@@ -539,13 +518,7 @@ a {
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 926px) {
   /* header */
-  .encabezado {
-    grid-template-columns: 1fr 2.5fr;
-  }
-  .titulo_principal {
-    font-size: 2.5rem;
-  }
-  .menu {
+  .menu-list {
     font-size: 1.8rem;
   }
   /* pinturas */
@@ -561,6 +534,56 @@ a {
 }
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 825px) {
+  /* header */
+  .logo {
+    margin-bottom: 0;
+  }
+  .open-m {
+    display: block;
+    border: 0;
+    font-size: 2.4rem;
+    cursor: pointer;
+    background-color: #dad5d5;
+    margin-right: 2rem;
+    padding: none;
+    border-radius: 0.3rem;
+  }
+  .close-m {
+    display: block;
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #dad5d5;
+    cursor: pointer;
+    padding-right: 2rem;
+  }
+  .menu {
+    z-index: 10010;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(119, 44, 44);
+    padding-top: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    gap: 1rem;
+  }
+  .menu.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
+    margin-top: 0;
+  }
   /* pinturas */
   .container_pin {
     grid-template-columns: 1fr;
@@ -595,10 +618,7 @@ a {
 }
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 747px) {
-  /* header */
-  .titulo_principal {
-    margin-left: 0.5rem;
-  }
+  /* index */
   .foto_inicio {
     width: 30rem;
     height: 43rem;
@@ -631,20 +651,6 @@ a {
 }
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 694px) {
-  /* header */
-  .encabezado {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "titulo" "menu";
-  }
-  .titulo_principal {
-    margin-top: 1rem;
-    justify-self: center;
-  }
-  .menu {
-    margin-bottom: 0.5rem;
-    justify-self: center;
-  }
   /* pinturas */
   .pin_info {
     padding-left: 2rem;
@@ -668,26 +674,7 @@ a {
 }
 /* ---------------------------------------------------------- */
 @media screen and (max-width: 480px) {
-  /* header */
-  .encabezado {
-    height: 25rem;
-    background-position: center;
-  }
   /* index */
-  .menu {
-    margin-top: 1rem;
-    grid-area: menu;
-    justify-self: center;
-    font-size: 1.5rem;
-  }
-  .menu li {
-    display: flex;
-    margin: 0.3rem;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0.5rem;
-    margin-left: 1rem;
-  }
   .nm {
     outline: outset 1rem;
     margin-left: 1.5rem;

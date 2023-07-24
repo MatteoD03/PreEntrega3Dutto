@@ -21,38 +21,30 @@ a{
 /* ---------- HEADER -----------*/
 
 .encabezado{
-    z-index: 10060;
-    display: grid;
-    height: 10rem;
-    justify-items: stretch;
-    background-image: url(../images/collage.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../images/extras/collage.jpg);
     background-size: contain;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "titulo menu"
+    height: 10rem;
 }
 
-.titulo_principal{
-    grid-area: titulo;
+.logo{
     font-weight: 900;
     font-size: 3.8rem;
-    justify-self: start;
-    align-self: start;
-    margin-left: 2rem;
-    margin-top: 2rem;
     background-color: $colorSecundario;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.menu{
-    grid-area: menu;
+.menu-list{
     list-style-type: none;
+    display: flex;
     font-weight: 700;
     font-size: 2.5rem;
-    justify-self: end;
-    align-self: end;
+    gap: 1rem;
     margin-right: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     li{
         display: inline-block;
         background-color: $colorSecundario;
@@ -68,6 +60,14 @@ a{
             color: inherit;
         }
     }
+}
+
+.open-m{
+    display: none;
+}
+
+.close-m{
+    display: none;
 }
 
 /* ----------- INDEX ----------------- */
